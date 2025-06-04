@@ -97,44 +97,54 @@
                     <h5 class="modal-title" id="editVehicleModalLabel">Edit Vehicle</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form>
+
+                <form id="editVehicleForm">
+                    <div class="modal-body">
+                        <input type="hidden" id="editVehicleId">
+
                         <div class="mb-3">
                             <label for="editLicensePlate" class="form-label">License Plate</label>
-                            <input type="text" class="form-control" id="editLicensePlate" value="B 067 JKT">
+                            <input type="text" class="form-control" id="editLicensePlate">
+                            <small id="editLicensePlateError" class="text-danger"></small>
                         </div>
                         <div class="mb-3">
                             <label for="editType" class="form-label">Type</label>
-                            <input type="text" class="form-control" id="editType" value="Mobile">
+                            <input type="text" class="form-control" id="editType">
+                             <small id="editTypeError" class="text-danger"></small>
                         </div>
                         <div class="mb-3">
                             <label for="editBrand" class="form-label">Brand</label>
-                            <input type="text" class="form-control" id="editBrand" value="Honda">
+                            <input type="text" class="form-control" id="editBrand">
+                             <small id="editBrandError" class="text-danger"></small>
                         </div>
                         <div class="mb-3">
                             <label for="editColor" class="form-label">Color</label>
-                            <input type="text" class="form-control" id="editColor" value="Red">
+                            <input type="text" class="form-control" id="editColor">
+                             <small id="editColorError" class="text-danger"></small>
                         </div>
                         <div class="mb-3">
                             <label for="createIsStolen" class="form-label">Is Stolen?</label>
                             <br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="is_stolen" id="createIsStolen"
+                                <input class="form-check-input" type="checkbox" name="is_stolen" id="editIsStolenYes"
                                     value="0">
                                 <label class="form-check-label" for="inlineRadio1">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="is_stolen" id="createIsStolen"
+                                <input class="form-check-input" type="checkbox" name="is_stolen" id="editIsStolenNo"
                                     value="1">
                                 <label class="form-check-label" for="inlineRadio2">No</label>
                             </div>
+                            <small id="editIsStolenError" class="text-danger"></small>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Update Vehicle</button>
-                </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Update Vehicle</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
