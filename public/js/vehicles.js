@@ -146,7 +146,7 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
                 <td>${item.type}</td>
                 <td>${item.brand}</td>
                 <td>${item.color}</td>
-               <td>${String(item.is_stolen) === '1' ? 'Yes' : 'No'}</td>
+                <td>${Number(item.is_stolen) === 1 ? 'yes' : 'no'}</td>
                 <td>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#editVehicleModal" onclick="showEditVehicleModal(${item.id}, ${index})">Edit</button>
@@ -202,7 +202,7 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
         const type = document.getElementById("editType").value.trim();
         const brand = document.getElementById("editBrand").value.trim();
         const color = document.getElementById("editColor").value.trim();
-        const isStolen = document.getElementById("editIsStolenYes").checked ? 1   : 0;
+        const isStolen = document.getElementById("editIsStolenYes").checked ? 1 : 0;
 
         const token = decodeURIComponent(getCookie('token'));
 
