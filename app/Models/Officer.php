@@ -10,6 +10,7 @@ class Officer extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'name',
         'badge_number',
         'rank',

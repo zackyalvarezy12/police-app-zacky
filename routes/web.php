@@ -12,6 +12,8 @@ Route::get('/register', [AuthController::class, 'registerPage']);
 Route::group(['prefix' => 'panel-control'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/vehicles', [VehiclesController::class, 'indexPage']);
-    Route::get('/Officers', [OfficerController::class, 'indexPage']);
+    Route::get('/officers', [OfficerController::class, 'indexPage'])->name('officers.index');
+
+
 
 });
